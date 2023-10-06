@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h1> Register New User</h1>
+
+    <div class="mx-auto w-50 p-3">
+    <form action="{% url 'api:register' %}" method="post">
+        {% csrf_token %}
+            <div class="mb-3">
+            <label for="InputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="InputName" name="name">
+            </div>
+            
+            <div class="mb-3">
+              <label for="InputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" name="email">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="InputAdhar" class="form-label">Adhar ID</label>
+                <input type="text" class="form-control" id="InputAdhar" name="adhar_id">
+            </div>
+
+            <div class="mb-3">
+                <label for="InputIncome" class="form-label">Anual Income(in Rupees)</label>
+                <input type="number" class="form-control" id="InputIncome" name="anual_income">
+            </div>
+            
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    
+    <h1>Take Loan</h1>
+    <div class="mx-auto w-50 p-3">
+        <form action="{% url 'api:loan' %}" method="post">
+            {% csrf_token %}
+                
+                <div class="mb-3">
+                <label for="InputName" class="form-label">User ID</label>
+                <input type="text" class="form-control" id="InputName" name="user_id">
+                </div>
+                
+    
+                <div class="mb-3">
+                    <label for="InputLoanType" class="form-label">Loan Type</label>
+                    <select class="form-select" aria-label="Default select example" id="InputLoanType" 
+                    name="loan_type">
+                        <option selected value="Personal">Personal</option>
+                        <option value="Home">Home</option>
+                        <option value="Education">Education</option>
+                        <option value="Car">Car</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="InputLoanAmount" class="form-label">Loan Amount(in Rupees)</label>
+                    <input type="number" class="form-control" id="InputLoanAmount" name="loan_amount">
+                </div>
+                <div class="mb-3">
+                    <label for="InputIntrest" class="form-label">Intrest Rate(%)</label>
+                    <input type="number" class="form-control" id="InputIntrest" name="intrest_rate">
+                </div>
+                
+
+
+                
+                <div class="mb-3">
+                    <label for="InputTermPeriod" class="form-label">Term Period(in Months)</label>
+                    <input type="number" class="form-control" id="InputTermPeriod" name="term_period">
+                </div>
+
+                <div class="mb-3">
+                    <label for="InputDD" class="form-label">Disbursement Date</label>
+                    <input type="date" class="form-control" id="InputDD" name="disbursement_date">
+                </div>
+                
+                
+
+                
+    
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+    
+            </form>
+        </div>
+    
+    
+    
+
+
+        <h1> Get Loan Statement and Future Dues </h1>
+        <div class="mx-auto w-50 p-3">
+            <form action="{% url 'api:getstatement' %}" method="get">
+                {% csrf_token %}
+                                        
+                    <div class="mb-3">
+                        <label for="InputLoan" class="form-label">Loan ID</label>
+                        <input type="text" class="form-control" id="InputLoan" name="loan_id">
+                    </div>
+        
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+        
+                </form>
+            </div>
+    
+        
+
+
+
+        <h1> Make EMI installment payment </h1>
+        <div class="mx-auto w-50 p-3">
+            <form action="{% url 'api:payment' %}" method="post">
+                {% csrf_token %}
+                                        
+                    <div class="mb-3">
+                        <label for="InputLoan" class="form-label">Loan ID</label>
+                        <input type="text" class="form-control" id="InputLoan" name="loan_id">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="InputAmount" class="form-label"> Amount  </label>
+                        <input type="text" class="form-control" id="InputAmount" name="amount">
+                    </div>
+                    
+        
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+        
+                </form>
+            </div>
+    
+        
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
