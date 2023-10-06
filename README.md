@@ -57,7 +57,7 @@ http://localhost:8000/
 
 
 
-## DataBase Schema:
+## DataBase Schema
 
 an overview of the Django models defined in the project.
 
