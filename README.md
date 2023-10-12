@@ -48,11 +48,11 @@ http://localhost:8000/
 
 ### Get All Statements For a Loan ID  
 [POST req]
--  api/get-statement/ -- Loan-Application-API   
+-  api/get-statement/ -- Get-Loan-Statements-API   
 
 ### Make EMI Payment For a Loan ID  
 [POST req]
--  api/make-payment/ -- Loan-Application-API    
+-  api/make-payment/ -- EMI-Payment-API    
   
 
 
