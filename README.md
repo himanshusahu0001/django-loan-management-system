@@ -1,7 +1,7 @@
 # Loan Management System in Django 
  
 
-## Create a Virtual Envoirnment  
+## Create a Virtual Environment  
 
 ```sh
 $ python -m venv .venv
@@ -9,7 +9,7 @@ $ python -m venv .venv
 ```sh
 $ .venv/scripts/activate
 ```  
-commands for linux,mac are diffrent. 
+commands for Linux and Mac are different. 
 
 ## Install all dependencies
 ```sh
@@ -41,9 +41,9 @@ http://localhost:8000/
   
 ### Register User For a Valid Adhar ID in Transactions.csv  
 [POST req]
--  api/register-user/ -- User-Register-API  
+-  api/register-user/ -- User-Registration-API  
 
-### Apply For Loan by valid User ID
+### Apply For a Loan with valid User ID
 [POST req]
 -  api/apply-loan/ -- Loan-Application-API   
 
@@ -58,7 +58,7 @@ http://localhost:8000/
 
 
 
-## DataBase Schema
+## Database Schema
 
 an overview of the Django models defined in the project.
 
