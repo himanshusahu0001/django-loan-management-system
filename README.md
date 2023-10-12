@@ -36,6 +36,7 @@ $ python manage.py runserver
 http://localhost:8000/
 
 ### Home  (access all functionalities from here)   
+[GET req]
 -  api/ -- Home for app  
   
 ### Register User For a Valid Adhar ID in Transactions.csv  
@@ -47,7 +48,7 @@ http://localhost:8000/
 -  api/apply-loan/ -- Loan-Application-API   
 
 ### Get All Statements For a Loan ID  
-[POST req]
+[GET req]
 -  api/get-statement/ -- Get-Loan-Statements-API   
 
 ### Make EMI Payment For a Loan ID  
